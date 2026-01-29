@@ -1,0 +1,128 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Lixie's Love Journal",
+      "theme": "Pastel Romantic Scrapbook",
+      "tone": "Soft, Playful, Intimate, 'Baper'",
+      "target_audience": "Lixie (Girlfriend)",
+      "key_dates": {
+        "dob": "2003-02-01",
+        "anniversary": "2024-12-22",
+        "first_meet": "2025-06-06"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": "#FFD1DC",
+        "primary_foreground": "#5D4037",
+        "secondary": "#FFFDD0",
+        "secondary_foreground": "#5D4037",
+        "accent": "#FF69B4",
+        "accent_foreground": "#FFFFFF",
+        "background": "#FFF0F5",
+        "card": "#FFFFFF",
+        "text_main": "#5D4037",
+        "text_muted": "#8D6E63",
+        "success": "#98FB98",
+        "error": "#FFB6C1"
+      },
+      "gradients": {
+        "main_bg": "linear-gradient(135deg, #FFF0F5 0%, #FFD1DC 100%)",
+        "button_hover": "linear-gradient(to right, #FF69B4, #FF1493)"
+      }
+    },
+    "typography": {
+      "font_family": {
+        "heading": "'Pinyon Script', cursive",
+        "body": "'Gaegu', sans-serif",
+        "accent": "'Fredoka', sans-serif"
+      },
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Gaegu:wght@300;400;700&family=Pinyon+Script&display=swap",
+      "scale": {
+        "h1": "text-5xl md:text-7xl",
+        "h2": "text-3xl md:text-5xl",
+        "body": "text-lg md:text-xl"
+      }
+    },
+    "layout": {
+      "container": "max-w-md mx-auto min-h-screen relative overflow-hidden shadow-2xl bg-white/50 backdrop-blur-sm",
+      "spacing": "p-6 md:p-8",
+      "radius": "rounded-3xl"
+    },
+    "animations": {
+      "transition_page": "animate-in fade-in zoom-in duration-500",
+      "hover_card": "hover:-translate-y-1 hover:rotate-1 transition-transform duration-300",
+      "float": "animate-bounce-slow",
+      "shake": "animate-shake"
+    },
+    "assets": {
+      "images": {
+        "background_texture": "https://images.unsplash.com/photo-1648365669565-52a950e8aaf0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwYXN0ZWwlMjBwaW5rJTIwY2hlcnJ5JTIwYmxvc3NvbSUyMGJhY2tncm91bmQlMjB0ZXh0dXJlfGVufDB8fHx8MTc2OTYzNzI3M3ww&ixlib=rb-4.1.0&q=85",
+        "sticker_bunny": "https://images.unsplash.com/photo-1631368060670-53a94323fa90?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MjQyMTd8MHwxfHNlYXJjaHwxfHxjdXRlJTIwYnVubnklMjBpbGx1c3RyYXRpb24lMjBzdGlja2VyfGVufDB8fHx8MTc2OTYzNzI3Nnww&ixlib=rb-4.1.0&q=85",
+        "sticker_heart": "https://images.unsplash.com/photo-1644665068900-a5c4e97364c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxjdXRlJTIwaGVhcnQlMjBkb29kbGUlMjBzdGlja2VyfGVufDB8fHx8MTc2OTYzNzI5NHww&ixlib=rb-4.1.0&q=85",
+        "sticker_cat": "https://images.unsplash.com/photo-1611228761972-2ce1d5ae538e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxjdXRlJTIwY2FydG9vbiUyMGNhdCUyMGRyYXdpbmclMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzY5NjM3MjkxfDA&ixlib=rb-4.1.0&q=85"
+      },
+      "icons": "Use Lucide React (Heart, Music, Calendar, Gift, Star, ArrowRight)"
+    }
+  },
+  "components": {
+    "Button": {
+      "base": "rounded-full font-['Fredoka'] font-semibold shadow-lg transition-all active:scale-95",
+      "primary": "bg-[#FF69B4] text-white hover:bg-[#FF1493]",
+      "secondary": "bg-[#FFFDD0] text-[#5D4037] hover:bg-[#FFFACD]"
+    },
+    "Card": {
+      "base": "bg-white rounded-2xl shadow-md border-2 border-[#FFD1DC] p-4 relative overflow-visible",
+      "polaroid": "bg-white p-3 pb-10 shadow-xl rotate-1 hover:rotate-0 transition-transform duration-300 border border-gray-100"
+    },
+    "Input": {
+      "base": "rounded-xl border-2 border-[#FFD1DC] focus:border-[#FF69B4] focus:ring-2 focus:ring-[#FF69B4]/20 bg-white/80 text-center font-['Gaegu'] text-2xl tracking-widest"
+    }
+  },
+  "pages": {
+    "Landing": {
+      "elements": ["TypingAnimation", "FloatingPetals", "StartButton"],
+      "content": "Hi Lixie... I made something for you."
+    },
+    "Password": {
+      "elements": ["SecretInput", "HintText", "CuteMascot"],
+      "logic": "Password: '22122024'. On error: Mascot shakes head. On success: Confetti explosion."
+    },
+    "Music": {
+      "elements": ["CassetteGrid", "CategoryTabs"],
+      "categories": ["Sedih", "Mood", "Semangat", "Favorit"]
+    },
+    "Timeline": {
+      "elements": ["VerticalLine", "MemoryCards"],
+      "style": "Scrapbook style with tape overlays"
+    },
+    "LoveCheck": {
+      "elements": ["QuestionText", "YesButton", "NoButton"],
+      "interaction": "NoButton moves away on hover. YesButton triggers 'I knew it!' popup."
+    },
+    "Birthday": {
+      "elements": ["CakeAnimation", "AIWishes"],
+      "prompt": "Generate a sweet, romantic birthday wish for Lixie (turning 22) from Ryzen. Mention her cute habits."
+    },
+    "ThankYou": {
+      "elements": ["ScrollingCredits", "FinalMessage"],
+      "prompt": "Generate a touching thank you note for being the best girlfriend."
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL DEPENDENCIES: `npm install framer-motion react-confetti typewriter-effect lucide-react`",
+    "2. SETUP TAILWIND: Add the custom colors and fonts to `tailwind.config.js`.",
+    "3. GLOBAL CSS: Import the Google Fonts in `index.css`. Set `body` font to 'Gaegu'.",
+    "4. ANIMATIONS: Use `framer-motion` for page transitions (AnimatePresence).",
+    "5. MUSIC: Since local MP3s are requested but not provided, create a MOCK player structure that accepts URLs. Use placeholder audio or free assets if possible.",
+    "6. AI TEXT: Use the provided prompts to generate static text for now, or simulate the AI call if backend is ready.",
+    "7. MOBILE FIRST: Ensure all touch targets are 44px+. Test on 375px width.",
+    "8. DATA-TESTID: Add `data-testid` to all buttons and inputs (e.g., `login-submit`, `love-yes-btn`)."
+  ],
+  "universal_guidelines": [
+    "Do not use default shadcn styles. Override radius to `rounded-3xl`.",
+    "Use 'Gaegu' font for all body text to maintain the handwritten feel.",
+    "Ensure the 'No' button in the Love Game is impossible to click (moves fast).",
+    "Use the provided image URLs for stickers and backgrounds."
+  ]
+}
